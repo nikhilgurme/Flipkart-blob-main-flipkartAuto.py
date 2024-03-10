@@ -1,0 +1,13 @@
+from selenium import webdriver
+from time import sleep
+import time
+
+driver=webdriver.Chrome()
+
+driver.get('https://www.flipkart.com')
+
+driver.find_element_by_xpath('/html/body/div[2]/div/div/button').click()
+searchBar=driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input')
+searchBar.send_keys('Microphone')
+searchButton=driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/form/div/button').click()
+time.sleep(5000)
